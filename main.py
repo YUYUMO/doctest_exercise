@@ -29,7 +29,7 @@ def expand_encoded_string(encoded_string):
     expanded_string = ""
     # iterate through the encoded string
     for i in range(len(encoded_string)):
-        #if a character is alphabetic, repeat it according to the number that follows and append to the expanded string
+        #if a character is alphabetic or is a punctuation, repeat it according to the number that follows and append to the expanded string
         if encoded_string[i].isalpha() or encoded_string[i] in string.punctuation:
             expanded_string += encoded_string[i] * int(encoded_string[i+1])
     return expanded_string
